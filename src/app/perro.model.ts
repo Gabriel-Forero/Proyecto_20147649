@@ -1,6 +1,7 @@
-class Persona
+class Perro
 {
     constructor(
-        public nombre: string
+        nombre: string
+
     ){}
 }
