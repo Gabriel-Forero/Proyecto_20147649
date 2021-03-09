@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {CustomerModel} from './models/customer.models'
+import {UserModel} from './models/user.model'
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProyectoDW';
+
+
+  
 }
 
 
