@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { ComprasComponent} from './compras/compras.component'
 import {MainComponent} from './main/main.component'
+import {DetalleCompraComponent} from './compras/detalle-compra/detalle-compra.component'
+import {ListadoComprasComponent} from './compras/listado-compras/listado-compras.component'
 
 const routes: Routes = [
   {
@@ -14,8 +16,16 @@ const routes: Routes = [
     component: MainComponent
   },
   {
-    path:'Compras',
+    path:'compra',
     component: ComprasComponent
+  },
+  {
+    path:'detalleCompra',
+    component: DetalleCompraComponent
+  },
+  {
+    path:'listadoCompra',
+    component: ListadoComprasComponent
   }
 ];
 
