@@ -16,7 +16,8 @@ import { DeleteComponent } from './modules/Administrador/delete/delete.component
 import { UpdateComponent } from './modules/Administrador/update/update.component';
 import { ReadComponent } from './modules/Administrador/read/read.component';
 import { SalesComponent } from './modules/Administrador/sales/sales.component';
-import {MainComponent2} from './modules/Administrador/main2/main2.component'
+import {MainComponent2} from './modules/Administrador/main2/main2.component';
+import { Detalle2Component } from './customer/compras/detalle2/detalle2.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MainComponent2} from './modules/Administrador/main2/main2.component'
     UpdateComponent,
     ReadComponent,
     SalesComponent,
-    MainComponent2
+    MainComponent2,
+    Detalle2Component
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,25 @@
-<p>detalle-compra works!</p>
+<h4>Detalle de su compra</h4>
+<h5>Debe refrescar la pagina para que aparezca la infromacion</h5>
+<p> Fecha: {{compras1.fecha}}</p>
+<p> Descripcion: {{compras1.descripcion}}</p>
+
+<table class="default" >
+    <tr>
+      <th>ID</th>
+      <th>Tipo</th>
+      <th>Color</th>
+      <th>Talla</th>
+      <th>Costo</th>
+    </tr>
+  
+    <tr  *ngFor = "let product of productos1">
+  
+      <td>{{product.ID}}</td>
+      <td>{{product.tipo}}</td>
+      <td>{{product.Color}}</td>
+      <td>{{product.Talla}}</td>
+      <td>{{product.costo}}</td>
+      
+      
+    </tr>
+  </table>

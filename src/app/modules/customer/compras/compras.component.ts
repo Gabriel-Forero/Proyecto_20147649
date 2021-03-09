@@ -128,4 +128,9 @@ export class ComprasComponent implements OnInit {
     }
   }
 
+  realizarCompra()
+  {
+    alert("Su compra se ha realizado con exito");
+  }
+
 }

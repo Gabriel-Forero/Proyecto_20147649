@@ -1,1 +1,14 @@
-<p>listado-compras works!</p>
+<h4>Sus compras son las siguientes</h4>
+<table class="default" >
+    <tr>
+      <th>Fecha</th>
+      <th>Descripcion</th>
+      <th>productos</th>
+    </tr>
+    <tr  *ngFor = "let compra of compras">
+  
+      <td>{{compra.fecha}}</td>
+      <td>{{compra.descripcion}}</td>
+      <td><button routerLink="/customer/detalle" > ver compra en detalle</button> </td>
+    </tr>
+  </table>

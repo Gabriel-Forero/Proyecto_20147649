@@ -1,16 +1,14 @@
-import { Component, OnInit,Input } from '@angular/core';
-import { ProductModel} from '../../../models/Product.models'
-
+import { Component, OnInit } from '@angular/core';
+import{ ComprasModel} from '../../../../models/Compras.models'
+import{ ProductModel} from '../../../../models/Product.models'
 
 @Component({
-  selector: 'app-main2',
-  templateUrl: './main2.component.html',
-  styleUrls: ['./main2.component.css']
+  selector: 'app-detalle2',
+  templateUrl: './detalle2.component.html',
+  styleUrls: ['./detalle2.component.css']
 })
-export class MainComponent2 implements OnInit {
-  @Input() datos:any;
-  @Input() arreglo:any;
-  producto?: ProductModel;
+export class Detalle2Component implements OnInit {
+
   producto1 = new ProductModel;
   producto2 = new ProductModel;
   producto3 = new ProductModel;
@@ -22,38 +20,49 @@ export class MainComponent2 implements OnInit {
   producto9 = new ProductModel;
   producto10 = new ProductModel;
 
-  productos: ProductModel[] = [this.producto1];
+  productos1: ProductModel[] = [this.producto1,this.producto5,this.producto9];
+  productos2: ProductModel[] = [this.producto2,this.producto8,this.producto3];
+  productos3: ProductModel[] = [this.producto7,this.producto4,this.producto3];
+  productos4: ProductModel[] = [this.producto6,this.producto4,this.producto1];
 
-  anadirProducto(id:any, tipo:any, color:any, talla:any, costo:any)
-  {
-    this.producto10.ID = id.value;
-    this.producto10.tipo=tipo.value;
-    this.producto10.Color=color.value;
-    this.producto10.Talla=talla.value;
-    this.producto10.costo=costo.value;
-    
+  compras1 = new ComprasModel;
+  compras2 = new ComprasModel;
+  compras3 = new ComprasModel;
+  compras4 = new ComprasModel;
 
-    this.productos.push(this.producto10);   
-
-  }
-
-  eliminarProducto(producto: ProductModel)
-  {
-    for(let i =0; i<this.productos.length; i++)
-    {
-      if(producto == this.productos[i])
-      {
-        this.productos.splice(i,1);
-      }
-    }
-  }
-
-  constructor() 
-  {
+  compras: ComprasModel[]=[this.compras1];
+  constructor() {
     this.inicializa();
+    this.llenaCompras();
+   }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
-  inicializa():void
-  {
+
+   llenaCompras()
+   {
+      this.compras1.fecha ="12/10/20";
+      this.compras1.productos = this.productos1;
+      this.compras1.descripcion ="Una muy buena compra vuelva pronto"
+
+      this.compras2.fecha ="12/01/21";
+      this.compras2.productos = this.productos1;
+      this.compras2.descripcion ="Feliz año nuevo"
+
+      this.compras3.fecha ="14/02/21";
+      this.compras3.productos = this.productos1;
+      this.compras3.descripcion ="Dia del amor y la amistad"
+
+      this.compras4.fecha ="20/02/21";
+      this.compras4.productos = this.productos1;
+      this.compras4.descripcion ="Feliz aniversario"
+
+      this.compras.push(this.compras2);
+      this.compras.push(this.compras3);
+      this.compras.push(this.compras4);
+   } 
+   inicializa()
+   {
     this.producto1.ID ="J1";
     this.producto1.Color="Azul";
     this.producto1.Inventario = 5;
@@ -116,20 +125,5 @@ export class MainComponent2 implements OnInit {
     this.producto9.Talla="41";
     this.producto9.costo=240000;
     this.producto9.tipo ="Tenis";
-
-    
-    this.productos?.push(this.producto2);
-    this.productos?.push(this.producto3);
-    this.productos?.push(this.producto4);
-    this.productos?.push(this.producto5);
-    this.productos?.push(this.producto6);
-    this.productos?.push(this.producto7);
-    this.productos?.push(this.producto8);
-    this.productos?.push(this.producto9);
-
-  }
-
-  ngOnInit(): void {
-  }
-
+   }
 }

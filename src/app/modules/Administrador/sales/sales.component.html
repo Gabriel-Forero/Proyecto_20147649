@@ -1,1 +1,14 @@
-<p>sales works!</p>
+<h4>Sus ventas son las siguientes</h4>
+<table class="default" >
+    <tr>
+      <th>Fecha</th>
+      <th>Usuario</th>
+      <th>Total</th>
+    </tr>
+    <tr  *ngFor = "let compra of compras">
+  
+      <td>{{compra.fecha}}</td>
+      <td>{{compra.descripcion}}</td>
+      <td>{{compra.total}} </td>
+    </tr>
+  </table>

@@ -10,7 +10,7 @@
       <th>Color</th>
       <th>Talla</th>
       <th>Costo</th>
-      <th>Inventario</th>
+
   
     </tr>
   
@@ -21,7 +21,7 @@
       <td>{{producto.Color}}</td>
       <td>{{producto.Talla}}</td>
       <td>{{producto.costo}}</td>
-      <td>{{producto.Inventario}}</td>
+      
       <button (click)="eliminarProducto(this.producto)">Eliminar</button>
     </tr>
   </table>
@@ -54,12 +54,12 @@
           <input  id="Costo" type="number" class="validate" #costo>
           <label for="Costo">Costo</label>
         </div>
-        <div class="input-field col s6">
-          <input id="inventario" type="number" class="validate" #inventario>
-          <label for="inventario">Inventario</label>
-        </div>
+        
       </div>
     </form>
   </div>
         
-  <button (click) = "anadirProducto(id,tipo,color,talla, costo, inventario)" >Agregar</button>
+  <button (click) = "anadirProducto(id,tipo,color,talla, costo)" >Agregar</button>
+
+  <h5>Para ver el reporte de ventas haga click en Reporte de ventas</h5> 
+  <button routerLink="/administrador/sales" class="waves-effect waves-light btn-large"> Reporte de ventas </button>

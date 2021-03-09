@@ -1,0 +1,24 @@
+<h4>Detalle de su compra</h4>
+<p> Fecha: {{compras4.fecha}}</p>
+<p> Descripcion: {{compras4.descripcion}}</p>
+
+<table class="default" >
+    <tr>
+      <th>ID</th>
+      <th>Tipo</th>
+      <th>Color</th>
+      <th>Talla</th>
+      <th>Costo</th>
+    </tr>
+  
+    <tr  *ngFor = "let producto of productos4">
+  
+      <td>{{producto.ID}}</td>
+      <td>{{producto.tipo}}</td>
+      <td>{{producto.Color}}</td>
+      <td>{{producto.Talla}}</td>
+      <td>{{producto.costo}}</td>
+      
+      
+    </tr>
+  </table>
