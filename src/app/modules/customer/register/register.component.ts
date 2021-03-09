@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { FormBuilder, FormGroup, Validators, FormsModule } from '@angular/forms';
+import {CustomerService} from '../../../service/customer.service'
+import { CustomerModule } from '../customer.module';
+import {UserModel} from '../../../models/User.models'
 
 declare const showMessage: any;
 
@@ -12,6 +14,7 @@ declare const showMessage: any;
 export class RegisterComponent implements OnInit {
 
   fgValidator!: FormGroup;
+  service?: CustomerService;
 
   constructor(private fb: FormBuilder)  {}
 
@@ -30,7 +33,8 @@ export class RegisterComponent implements OnInit {
         celular:['',[Validators.required]],
         pais:['',[Validators.required]],
         ciudad:['',[Validators.required]],
-        contraseña:['',[Validators.required]]
+        contraseña:['',[Validators.required]],
+        tipoUsuario:['',[Validators.required]]
       });
   }
 
@@ -43,7 +47,14 @@ export class RegisterComponent implements OnInit {
      
       return false;
     }
-    
+    else
+    {
+      let model = this.getUserData();
+      this.service?.UserRegistering(model);
+      
+      alert("Usuario agregado");
+    }
+  
     return false;
   }
 
@@ -52,4 +63,20 @@ export class RegisterComponent implements OnInit {
     return this.fgValidator.controls;
   }
 
+  getUserData(): UserModel
+  {
+    let model = new UserModel();
+    model.id = '1';
+    model.documento = this.fgv.documento.value;
+    model.nombre=this.fgv.nombre.value;
+    model.apellido=this.fgv.apellido.value;
+    model.email=this.fgv.email.value;
+    model.celular=this.fgv.celular.value;
+    model.pais=this.fgv.pais.value;
+    model.ciudad=this.fgv.ciudad.value;  
+    model.contraseña= this.fgv.contraseña.value; 
+    model.tipoUsuario=this.fgv.tipoUsuario.value; 
+
+    return model;
+  }
 }

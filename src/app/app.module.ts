@@ -9,6 +9,10 @@ import { SideMenuComponent } from './public/master-page/side-menu/side-menu.comp
 import { HeroComponent } from './public/master-page/hero/hero.component';
 import { FooterComponent } from './public/master-page/footer/footer.component';
 
+import {FormsModule} from '@angular/forms'
+import {HttpClientModule} from '@angular/common/http'
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import { FooterComponent } from './public/master-page/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

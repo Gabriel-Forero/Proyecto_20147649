@@ -1,6 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import {CustomerModel} from './models/customer.models'
-import {UserModel} from './models/user.model'
+import { CustomerService } from './service/customer.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,7 @@ import {UserModel} from './models/user.model'
 })
 export class AppComponent {
   title = 'ProyectoDW';
-
-
+  
   
 }
 
