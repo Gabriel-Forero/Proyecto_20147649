@@ -1,5 +1,51 @@
 <br>
 <h3>Realiza tu compra</h3>
-<a routerLink ="" class="waves-effect waves-light btn-large">Comprar</a>
 <a routerLink ="/customer/listadoCompra" class="waves-effect waves-light btn-large">Listado de compras</a>
 <a routerLink ="/customer/detalleCompra" class="waves-effect waves-light btn-large">Detalle de compra</a>
+
+<table class="default" >
+    <tr>
+      <th>ID</th>
+      <th>Tipo</th>
+      <th>Color</th>
+      <th>Talla</th>
+      <th>Costo</th>
+    
+  
+    </tr>
+  
+    <tr  *ngFor = "let producto of productos">
+  
+      <td>{{producto.ID}}</td>
+      <td>{{producto.tipo}}</td>
+      <td>{{producto.Color}}</td>
+      <td>{{producto.Talla}}</td>
+      <td>{{producto.costo}}</td>
+      
+      <button (click) ="comprarProducto(this.producto)">Comprar</button>
+    </tr>
+  </table>
+
+<h5>Carrito de compras</h5>
+
+<table class="default" >
+    <tr>
+      <th>ID</th>
+      <th>Tipo</th>
+      <th>Color</th>
+      <th>Talla</th>
+      <th>Costo</th>
+    </tr>
+  
+    <tr  *ngFor = "let producto of carritoCompras">
+  
+      <td>{{producto.ID}}</td>
+      <td>{{producto.tipo}}</td>
+      <td>{{producto.Color}}</td>
+      <td>{{producto.Talla}}</td>
+      <td>{{producto.costo}}</td>
+      
+      <button (click) ="eliminarProducto(this.producto)">Eliminar</button>
+    </tr>
+  </table>
+  

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { ProductModel} from '../../../models/Product.models'
 
 
@@ -8,7 +8,8 @@ import { ProductModel} from '../../../models/Product.models'
   styleUrls: ['./main2.component.css']
 })
 export class MainComponent2 implements OnInit {
-
+  @Input() datos:any;
+  @Input() arreglo:any;
   producto?: ProductModel;
   producto1 = new ProductModel;
   producto2 = new ProductModel;
