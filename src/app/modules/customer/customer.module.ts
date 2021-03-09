@@ -5,9 +5,12 @@ import { CustomerRoutingModule } from './customer-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { ComprasComponent } from './compras/compras.component';
+import { MainComponent } from './main/main.component';
+
 
 @NgModule({
-  declarations: [RegisterComponent],
+  declarations: [RegisterComponent, ComprasComponent, MainComponent],
   imports: [
     CommonModule,
     CustomerRoutingModule,

@@ -26,6 +26,11 @@ const routes: Routes = [
 
   },
   {
+    path:'administrador',
+    loadChildren: ()=> import('./modules/Administrador/administrador.module').then(m=>m.AdministradorModule)
+
+  },
+  {
     path:'**',
     redirectTo: '/home'
   },

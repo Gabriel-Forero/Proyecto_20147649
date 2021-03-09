@@ -10,9 +10,12 @@ import { HeroComponent } from './public/master-page/hero/hero.component';
 import { FooterComponent } from './public/master-page/footer/footer.component';
 
 import {FormsModule} from '@angular/forms'
-import {HttpClientModule} from '@angular/common/http'
-
-
+import {HttpClientModule} from '@angular/common/http';
+import { CreateComponent } from './modules/Administrador/create/create.component';
+import { DeleteComponent } from './modules/Administrador/delete/delete.component';
+import { UpdateComponent } from './modules/Administrador/update/update.component';
+import { ReadComponent } from './modules/Administrador/read/read.component';
+import { SalesComponent } from './modules/Administrador/sales/sales.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,12 @@ import {HttpClientModule} from '@angular/common/http'
     NavbarComponent,
     SideMenuComponent,
     HeroComponent,
-    FooterComponent
+    FooterComponent,
+    CreateComponent,
+    DeleteComponent,
+    UpdateComponent,
+    ReadComponent,
+    SalesComponent
   ],
   imports: [
     BrowserModule,
