@@ -28,38 +28,38 @@
   
   <h5>Para agregar un producto llene el formulario y haga click en agregar</h5> 
   <div class="row">
-    <form class="col s12">
+    <form class="col s12" >
       <div class="row">
         <div class="input-field col s6">
-          <input  id="Id" type="text" class="validate">
-          <label for="Ide">Id</label>
+          <input  id="Id" type="text" class="validate" #id>
+          <label for="Id">Id</label>
         </div>
         <div class="input-field col s6">
-          <input id="Tipo" type="text" class="validate">
+          <input id="Tipo" type="text" class="validate" #tipo>
           <label for="Tipo">Tipo</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input  id="Color" type="text" class="validate">
+          <input  id="Color" type="text" class="validate" #color>
           <label for="Color">Color</label>
         </div>
         <div class="input-field col s6">
-          <input id="Talla" type="text" class="validate">
+          <input id="Talla" type="text" class="validate" #talla>
           <label for="Talla">Talla</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input  id="Costo" type="number" class="validate">
+          <input  id="Costo" type="number" class="validate" #costo>
           <label for="Costo">Costo</label>
         </div>
         <div class="input-field col s6">
-          <input id="inventario" type="number" class="validate">
+          <input id="inventario" type="number" class="validate" #inventario>
           <label for="inventario">Inventario</label>
         </div>
       </div>
     </form>
   </div>
         
-  <button >Agregar</button>
+  <button (click) = "anadirProducto(id,tipo,color,talla, costo, inventario)" >Agregar</button>

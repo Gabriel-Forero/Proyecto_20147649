@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductModel} from '../../../models/Product.models'
 
+
 @Component({
   selector: 'app-main2',
   templateUrl: './main2.component.html',
@@ -18,12 +19,21 @@ export class MainComponent2 implements OnInit {
   producto7 = new ProductModel;
   producto8 = new ProductModel;
   producto9 = new ProductModel;
+  producto10 = new ProductModel;
 
   productos: ProductModel[] = [this.producto1];
 
-  añadirProducto(producto: ProductModel)
+  anadirProducto(id:any, tipo:any, color:any, talla:any, costo:any, inventario:any)
   {
-    this.productos.push(producto);
+    this.producto10.ID = id.value;
+    this.producto10.tipo=tipo.value;
+    this.producto10.Color=color.value;
+    this.producto10.Talla=talla.value;
+    this.producto10.costo=costo.value;
+    this.producto10.Inventario=inventario.value;
+
+    this.productos.push(this.producto10);   
+
   }
 
   eliminarProducto(producto: ProductModel)
