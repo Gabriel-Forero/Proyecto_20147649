@@ -1,7 +1,65 @@
 <br>
 <h2>Bienvenido Administrador</h2>
-<a routerLink ="/administrador/create" class="waves-effect waves-light btn-large">Crear producto</a>
-<a routerLink ="/administrador/update" class="waves-effect waves-light btn-large">Editar producto</a>
-<a routerLink ="/administrador/delete" class="waves-effect waves-light btn-large">Eliminar producto</a>
-<a routerLink ="/administrador/read" class="waves-effect waves-light btn-large">Ver productos</a>
-<a routerLink ="/administrador/sales" class="waves-effect waves-light btn-large">Ventas</a>
+
+<h5>A continuacion podra ver todos nuestros productos en stock</h5>
+
+<table class="default">
+    <tr>
+      <th>ID</th>
+      <th>Tipo</th>
+      <th>Color</th>
+      <th>Talla</th>
+      <th>Costo</th>
+      <th>Inventario</th>
+  
+    </tr>
+  
+    <tr *ngFor = "let producto of productos">
+  
+      <td>{{producto.ID}}</td>
+      <td>{{producto.tipo}}</td>
+      <td>{{producto.Color}}</td>
+      <td>{{producto.Talla}}</td>
+      <td>{{producto.costo}}</td>
+      <td>{{producto.Inventario}}</td>
+      <button (click)="eliminarProducto(this.producto)">Eliminar</button>
+    </tr>
+  </table>
+  
+  <h5>Para agregar un producto llene el formulario y haga click en agregar</h5> 
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="Id" type="text" class="validate">
+          <label for="Ide">Id</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="Tipo" type="text" class="validate">
+          <label for="Tipo">Tipo</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="Color" type="text" class="validate">
+          <label for="Color">Color</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="Talla" type="text" class="validate">
+          <label for="Talla">Talla</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="Costo" type="number" class="validate">
+          <label for="Costo">Costo</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="inventario" type="number" class="validate">
+          <label for="inventario">Inventario</label>
+        </div>
+      </div>
+    </form>
+  </div>
+        
+  <button >Agregar</button>

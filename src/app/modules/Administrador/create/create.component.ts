@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductModel} from '../../../models/Product.models'
 
 @Component({
   selector: 'app-create',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class CreateComponent implements OnInit {
 
   constructor() { }
-
+ 
   ngOnInit(): void {
   }
 

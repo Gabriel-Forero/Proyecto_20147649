@@ -1,7 +1,7 @@
 
 export class ProductModel{
     tipo?:String;
-    costo?:String;
+    costo?:Number;
     Talla?:String;
     ID?:String;
     Color?:String;

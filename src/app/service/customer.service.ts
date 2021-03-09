@@ -25,7 +25,7 @@ export class CustomerService {
   UserRegistering(user: UserModel)
   {
     this.usuarios.push(user);
-    console.log(user.nombre);
+    alert(user.nombre);
   }
   
 }
